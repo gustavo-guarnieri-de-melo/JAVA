@@ -1,0 +1,24 @@
+package entrada_saida_processamento;
+
+import java.util.Scanner;
+
+public class Ex24 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		String nome, sexo, estado_civil;
+		
+		System.out.printf("digite seu nome: ");
+		nome = ler.next();
+		System.out.printf("digite seu sexo em f: ");
+		sexo = ler.next();
+		System.out.printf("digite seu estado civil: ");
+		estado_civil = ler.next();
+		
+		if (sexo = "f"){
+			
+		}
+	}
+
+}

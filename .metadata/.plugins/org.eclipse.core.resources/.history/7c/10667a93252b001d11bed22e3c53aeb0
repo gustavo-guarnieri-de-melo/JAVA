@@ -1,0 +1,27 @@
+package entrada_saida_processamento;
+
+import java.util.Scanner;
+
+public class Ex20 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		
+		double p1 =0 ;
+		double p2=7.5 - p1 / 2;
+		double media = (p1 + (p2 * 2)) / 3;
+		
+		System.out.printf("digite o valor da p1: ");
+		p1 = ler.nextInt();
+		
+		if(media > 5) {
+			System.out.printf("Aprovado");
+		}
+		else {
+			System.out.printf("voce precisa de %f :", media);
+		}
+
+	}
+
+}
