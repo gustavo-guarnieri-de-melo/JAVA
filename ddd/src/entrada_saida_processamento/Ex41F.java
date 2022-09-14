@@ -1,7 +1,8 @@
-package entrada_processamento_saida;
+package entrada_saida_processamento;
 
 import java.util.Scanner;
-public class Ex41f {
+
+public class Ex41F {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);

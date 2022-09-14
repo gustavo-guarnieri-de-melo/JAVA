@@ -1,30 +1,38 @@
 package entrada_saida_processamento;
+import java.util.Scanner;
+
 
 public class Ex36W {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
-
-		int num, a, b, i;
-		System.out.print("Digite um valor positivo: ");
-		num = ler.nextInt();
-		while(num <= 0) {
-			System.out.print("Digite um valor positivo: ");
-			num = ler.nextInt();
+		int x, a, b, r;
+		
+		System.out.printf("digite um valor");
+		x = ler.nextInt();
+		
+		while(x < 0) {
+			System.out.printf("insira um valor positivo: ");
+			x = ler.nextInt();
 		}
-		System.out.print("Digite o inicio: ");
+		
+		System.out.printf("digite o valor no qual ira se iniciar: ");
 		a = ler.nextInt();
 		
-		System.out.print("Digite o final: ");
+		System.out.printf("digite o valor no qual ira ser terminado: ");
 		b = ler.nextInt();
 		
-		while(b <= a){
-			System.out.print("O primeiro valor deve ser maior, digite novamente o segundo: ");
+		while(b < a) {
+			System.out.printf("o segundo valor precisa ser maior que o primeiro: ");
 			b = ler.nextInt();
+		}
+		
+		while(b >= a) {
+			r = x * b;
+			System.out.printf("sua tabuada é:%d ", r);
+			b = b -1;
 			
 		}
-		i = 1;
-		for i in range()
 
 	}
 

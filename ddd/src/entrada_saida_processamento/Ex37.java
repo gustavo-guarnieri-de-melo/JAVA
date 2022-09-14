@@ -1,4 +1,6 @@
-package entrada_processamento_saida;
+package entrada_saida_processamento;
+
+import java.util.Scanner;
 
 import java.util.Scanner;
 

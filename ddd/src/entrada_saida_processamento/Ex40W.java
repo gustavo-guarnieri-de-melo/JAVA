@@ -1,20 +1,23 @@
-package entrada_processamento_saida;
+package entrada_saida_processamento;
 
-public class Ex40w {
+import java.util.Scanner;
 
-	public static void main(String[] args) {
+public class Ex40W {
+	Scanner ler = new Scanner(System.in);
 	
-		int a=1,b=1,c=1,d=b+a+c,i=1;
-		
-		
-		while(i<=20) {
-		    System.out.printf("\n%d.º: %d",i,a);
-			d=b+a+c;
-			a=b;
-		    b=c;
-		    c=d;
-	    	i++;
-		}
+	int v = 20, v1 =1, v2 =1, v3=1, v4 =1, r;{
+	
+	do {
+		r = v1 + v2 + v3;
+		v1 = v2;
+		v2 = v3;
+		v3 = r;
+		v4 = v4 + 1;
+	}while(v4 <= 20);
+	
+	
+	
 	}
-
+		
+	
 }
