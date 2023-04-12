@@ -18,7 +18,7 @@ public class Programa2 {
         //try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
        
         // Cria o recria o arquivo
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path,true))) {
             for(String line: lines) {
                 // escreve a linha no arquivo
                 bw.write(line);
