@@ -1,0 +1,64 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Programa {
+
+
+    public static void main(String[] args) {
+
+
+        String path = "C:\\temp\\lista4.txt";
+        String path_total = "C:\\temp\\total.txt";
+
+        FileReader fr = null;
+        BufferedReader br = null;
+       
+        try {
+            fr = new FileReader(path);
+            br = new BufferedReader(fr);
+
+
+            String line = br.readLine();
+
+
+            while(line != null){
+            	String[] produto = line.split(",");
+                double total = Double.parseDouble(produto[1]) * Double.parseDouble(produto[2]);
+                
+                String linha = produto[0] + "," + total;
+                
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(path_total, true))) {
+                    bw.write(linha);
+                    bw.newLine();
+                }
+                catch(IOException e) {
+                    e.printStackTrace();
+                }
+
+                line = br.readLine();
+            }
+        }
+        catch(IOException e) {
+            System.out.println("Erro ao ler o arquivo - " + e.getMessage());
+        }
+        finally {
+            try{
+                if (br != null)
+                    br.close();
+
+
+                if (fr != null)
+                    fr.close();
+            }
+            catch(IOException e) {
+                System.out.println("Erro ao escrever no arquivo - " + e.getMessage());
+            }
+        }
+    }
+}
