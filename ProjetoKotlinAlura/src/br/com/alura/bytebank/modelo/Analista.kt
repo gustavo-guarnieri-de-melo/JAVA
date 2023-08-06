@@ -1,3 +1,5 @@
+package br.com.alura.bytebank.modelo
+
 class Analista(
     nome: String,
     cpf: String,
@@ -12,5 +14,4 @@ class Analista(
         get() {
             return salario * 0.1
         }
-
 }
